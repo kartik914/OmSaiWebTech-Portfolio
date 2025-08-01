@@ -31,9 +31,8 @@ import {
   SiPrettier,
   SiTypescript,
   SiVercel,
-  SiVisualstudiocode,
 } from "react-icons/si";
-import { VscCode } from "react-icons/vsc";
+import { VscCode, VscVscode } from "react-icons/vsc";
 
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -167,7 +166,7 @@ const TOOLS = [
   {
     name: "VS Code",
     content: "Next.js is a React framework for production",
-    icon: <SiVisualstudiocode size={"50px"} color="#007acc" />,
+    icon: <VscVscode size={"50px"} color="#007acc" />,
     color: "#007acc",
   },
   {
