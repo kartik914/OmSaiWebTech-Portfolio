@@ -28,22 +28,22 @@ async function appendToGoogleSheet({
     "\n"
   )!;
 
-  const auth = new google.auth.JWT(
-    CLIENT_EMAIL,
-    undefined,
-    PRIVATE_KEY,
-    ["https://www.googleapis.com/auth/spreadsheets"]
-  );
-  const sheets = google.sheets({ version: "v4", auth });
-  const now = new Date().toISOString();
-  await sheets.spreadsheets.values.append({
-    spreadsheetId: SHEET_ID,
-    range: "Sheet1!A:D", // Adjust if your sheet/tab name is different
-    valueInputOption: "USER_ENTERED",
-    requestBody: {
-      values: [[now, fullName, email, message]],
-    },
-  });
+  // const auth = new google.auth.JWT(
+  //   CLIENT_EMAIL,
+  //   undefined,
+  //   PRIVATE_KEY,
+  //   ["https://www.googleapis.com/auth/spreadsheets"]
+  // );
+  // const sheets = google.sheets({ version: "v4", auth });
+  // const now = new Date().toISOString();
+  // await sheets.spreadsheets.values.append({
+  //   spreadsheetId: SHEET_ID,
+  //   range: "Sheet1!A:D", // Adjust if your sheet/tab name is different
+  //   valueInputOption: "USER_ENTERED",
+  //   requestBody: {
+  //     values: [[now, fullName, email, message]],
+  //   },
+  // });
 }
 
 export async function POST(req: Request) {
