@@ -44,7 +44,8 @@ const HeroSection = () => {
                       <h1
                         className={cn(
                           "font-thin text-6xl text-transparent text-slate-800 ml-1 text-left",
-                          "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl "
+                          "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl ",
+                          "bg-gradient-to-r from-orange-400 to-orange-800 bg-clip-text text-transparent"
                         )}
                       >
                         {config.author.split(" ")[0]}
@@ -71,7 +72,10 @@ const HeroSection = () => {
                   </p>
                 </BlurIn>
               </div>
-              <div className="mt-8 md:ml-2 flex flex-col gap-3">
+              <div className="mt-8 md:ml-2 flex flex-col gap-3 font-thin text-justify text-slate-500 dark:text-zinc-400">
+                OMSAI WEBTECH is a premium IT company based in Ambala offering scalable and smart solutions in Web Development, Mobile App Development, Digital Marketing, Testing, Game Development, and more. Our expert team delivers high-quality, customized solutions for businesses of all sizes. We believe in long-term partnerships and digital growth.
+              </div>
+              {/* <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link href={config.pdfLink} target="_blank" className="flex-1">
                   <BoxReveal delay={2} width="100%">
                     <Button className="flex items-center gap-2 w-full">
@@ -86,21 +90,21 @@ const HeroSection = () => {
                       Hire Us
                     </Button>
                   </Link>
-                  {/* <Link href={config.social.github} target="_blank">
+                  <Link href={config.social.github} target="_blank">
                     <Button variant={"outline"}>
                       <SiGithub size={24} />
                     </Button>
-                  </Link> */}
-                  {/* <Link
+                  </Link>
+                  <Link
                     href={config.social.linkedin}
                     target="_blank"
                   >
                     <Button variant={"outline"}>
                       <SiLinkedin size={24} />
                     </Button>
-                  </Link> */}
+                  </Link>
                 </div>
-              </div>
+              </div> */}
             </>
           )}
         </div>

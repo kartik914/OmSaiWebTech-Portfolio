@@ -18,10 +18,7 @@ const Header = ({ loader }: HeaderProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   return (
     <motion.header
-      className={cn(
-        styles.header,
-        "transition-colors delay-100 duration-500 ease-in"
-      )}
+      className={cn(styles.header, "transition-colors delay-100 duration-500 ease-in")}
       style={{
         background: isActive ? "hsl(var(--background) / .8)" : "transparent",
         // backgroundImage:
@@ -47,7 +44,10 @@ const Header = ({ loader }: HeaderProps) => {
       </div> */}
       <div className={cn(styles.bar, "flex items-center justify-between")}>
         <Link href="/" className="flex items-center justify-center">
-          <Button variant={"link"} className="text-md">
+          <Button
+            variant={"link"}
+            className="text-md bg-gradient-to-r from-orange-400 to-orange-800 bg-clip-text text-transparent"
+          >
             {config.author}
           </Button>
         </Link>
@@ -55,27 +55,17 @@ const Header = ({ loader }: HeaderProps) => {
         <Button
           variant={"ghost"}
           onClick={() => setIsActive(!isActive)}
-          className={cn(
-            styles.el,
-            "m-0 p-0 h-6 bg-transparent flex items-center justify-center"
-          )}
+          className={cn(styles.el, "m-0 p-0 h-6 bg-transparent flex items-center justify-center")}
         >
           <div className="relative flex items-center">
-            <motion.p
-              variants={opacity}
-              animate={!isActive ? "open" : "closed"}
-            >
+            <motion.p variants={opacity} animate={!isActive ? "open" : "closed"}>
               Menu
             </motion.p>
             <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
               Close
             </motion.p>
           </div>
-          <div
-            className={`${styles.burger} ${
-              isActive ? styles.burgerActive : ""
-            }`}
-          ></div>
+          <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
         </Button>
       </div>
       <motion.div
@@ -84,9 +74,7 @@ const Header = ({ loader }: HeaderProps) => {
         animate={isActive ? "open" : "closed"}
         className={styles.background}
       ></motion.div>
-      <AnimatePresence mode="wait">
-        {isActive && <Nav setIsActive={setIsActive} />}
-      </AnimatePresence>
+      <AnimatePresence mode="wait">{isActive && <Nav setIsActive={setIsActive} />}</AnimatePresence>
     </motion.header>
   );
 };

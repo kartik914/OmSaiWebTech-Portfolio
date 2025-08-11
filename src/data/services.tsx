@@ -40,6 +40,12 @@ const services: Services[] = [
     title: "Game Development",
     description: "Creating engaging and immersive games for various platforms with cutting-edge technology.",
     icon: <TbDeviceGamepad2 />,
+  },
+  {
+    id: "meta-business-suite-google-my-business-optimization",
+    title: "Meta Business Suite & Google My Business Optimization",
+    description: "Optimizing your business presence on Meta and Google platforms for better visibility and engagement.",
+    icon: <FiPieChart />,
   }
 ];
 export default services;
